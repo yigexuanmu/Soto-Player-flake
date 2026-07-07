@@ -31,16 +31,6 @@ nix shell github:yigexuanmu/soto-player-flake -c soto-player
 }
 ```
 
-## 构建流程
-
-```
-pnpm install（离线缓存）
-  → cargo vendor dir 设置
-  → node-gyp rebuild better-sqlite3（Electron headers）
-  → napi build audio-engine + media-ctrl（系统 FFmpeg）
-  → electron-vite build（Vue + Electron 主进程）
-```
-
 ## 依赖
 
 - Node.js 22
